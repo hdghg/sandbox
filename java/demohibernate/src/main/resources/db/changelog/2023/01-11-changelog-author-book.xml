@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+    <changeSet id="2" author="atokar">
+        <sql>CREATE TABLE author (
+            author_id bigserial primary key,
+            name varchar(255))
+        </sql>
+    </changeSet>
+    <changeSet id="3" author="atokar">
+        <sql>CREATE TABLE book (
+            book_id bigserial primary key,
+            title varchar(255),
+            author_id int8 not null references author(author_id))
+        </sql>
+    </changeSet>
+    <changeSet id="4" author="atokar">
+        <sql>INSERT INTO author (name) VALUES ('John Wick'), ('Franz Kafka'), ('JKR')
+        </sql>
+    </changeSet>
+    <changeSet id="5" author="atokar">
+        <sql>INSERT INTO book (title, author_id) VALUES ('title1', 1),
+            ('title2', 1),
+            ('title3', 2),
+            ('title4', 3),
+            ('title5', 1),
+            ('title6', 2),
+            ('title7', 1),
+            ('title8', 1),
+            ('title9', 3),
+            ('title10', 1)
+        </sql>
+    </changeSet>
+</databaseChangeLog>
