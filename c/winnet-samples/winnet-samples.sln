@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spxserv", "spxserv\spxserv.vcproj", "{9BA665A0-1559-4BE2-B91C-8CE32501EF6C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common", "common\common.vcproj", "{9ADDDD8C-C0FA-420D-8A6D-059A243BED1D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spxclient", "spxclient\spxclient.vcproj", "{4308B1B4-5811-4DE7-933C-F68CD832A885}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tcpserv", "tcpserv\tcpserv.vcproj", "{98E6410F-0D6F-4B00-87F3-357FF01D215C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tcpclient", "tcpclient\tcpclient.vcproj", "{49A95622-8F21-4367-AA3A-B5E6E288D5B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BA665A0-1559-4BE2-B91C-8CE32501EF6C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9BA665A0-1559-4BE2-B91C-8CE32501EF6C}.Debug|Win32.Build.0 = Debug|Win32
+		{9BA665A0-1559-4BE2-B91C-8CE32501EF6C}.Release|Win32.ActiveCfg = Release|Win32
+		{9BA665A0-1559-4BE2-B91C-8CE32501EF6C}.Release|Win32.Build.0 = Release|Win32
+		{9ADDDD8C-C0FA-420D-8A6D-059A243BED1D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9ADDDD8C-C0FA-420D-8A6D-059A243BED1D}.Debug|Win32.Build.0 = Debug|Win32
+		{9ADDDD8C-C0FA-420D-8A6D-059A243BED1D}.Release|Win32.ActiveCfg = Release|Win32
+		{9ADDDD8C-C0FA-420D-8A6D-059A243BED1D}.Release|Win32.Build.0 = Release|Win32
+		{4308B1B4-5811-4DE7-933C-F68CD832A885}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4308B1B4-5811-4DE7-933C-F68CD832A885}.Debug|Win32.Build.0 = Debug|Win32
+		{4308B1B4-5811-4DE7-933C-F68CD832A885}.Release|Win32.ActiveCfg = Release|Win32
+		{4308B1B4-5811-4DE7-933C-F68CD832A885}.Release|Win32.Build.0 = Release|Win32
+		{98E6410F-0D6F-4B00-87F3-357FF01D215C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{98E6410F-0D6F-4B00-87F3-357FF01D215C}.Debug|Win32.Build.0 = Debug|Win32
+		{98E6410F-0D6F-4B00-87F3-357FF01D215C}.Release|Win32.ActiveCfg = Release|Win32
+		{98E6410F-0D6F-4B00-87F3-357FF01D215C}.Release|Win32.Build.0 = Release|Win32
+		{49A95622-8F21-4367-AA3A-B5E6E288D5B9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{49A95622-8F21-4367-AA3A-B5E6E288D5B9}.Debug|Win32.Build.0 = Debug|Win32
+		{49A95622-8F21-4367-AA3A-B5E6E288D5B9}.Release|Win32.ActiveCfg = Release|Win32
+		{49A95622-8F21-4367-AA3A-B5E6E288D5B9}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
