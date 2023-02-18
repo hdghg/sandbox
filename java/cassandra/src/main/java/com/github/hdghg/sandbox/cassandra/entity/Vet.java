@@ -2,6 +2,8 @@ package com.github.hdghg.sandbox.cassandra.entity;
 import java.util.Set;
 import java.util.UUID;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
@@ -54,5 +56,10 @@ public class Vet {
 
     public void setSpecialties(Set<String> specialties) {
         this.specialties = specialties;
+    }
+
+    @Override
+    public String toString() {
+        return new ReflectionToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).toString();
     }
 }
