@@ -28,7 +28,6 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
      * Step 1. Load ids as list
      * Step 2. Load entities by calling {@link org.springframework.data.repository.CrudRepository#findAllById(Iterable)}
      * Step 3. Sort by ids from step 1
-     *
      */
     @Query("""
             SELECT a.authorId FROM Author a

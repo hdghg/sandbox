@@ -36,10 +36,7 @@ class AuthorTests {
     void filterIds() {
         List<Long> ids = authorRepository.findIds("John Wick", "titl", PageRequest.of(1, 2));
         List<Author> authorList = authorRepository.findAllById(ids);
-
         authorList.forEach(i -> System.err.println(i));
     }
-
-
 
 }
