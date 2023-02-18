@@ -1,11 +1,11 @@
-CREATE TABLE spring_cassandra.vet (
+CREATE TABLE kn.vet (
   id            uuid,
   firstName     text,
   lastName      text,
   specialties   set<text>,
   PRIMARY KEY (id));
 
-CREATE TABLE spring_cassandra.vet_by_clinic (
+CREATE TABLE kn.vet_by_clinic (
   clinicName    text,
   vetId         uuid,
   fullName      text,

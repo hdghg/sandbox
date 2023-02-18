@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.cassandra.CassandraProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.data.cassandra.config.AbstractCassandraConfiguration;
-import org.springframework.data.cassandra.config.SchemaAction;
 import org.springframework.data.cassandra.core.cql.keyspace.CreateKeyspaceSpecification;
 import org.springframework.data.cassandra.core.cql.keyspace.DropKeyspaceSpecification;
 import org.springframework.data.cassandra.core.cql.keyspace.KeyspaceOption;
@@ -15,8 +14,6 @@ import org.springframework.data.cassandra.core.cql.session.init.ResourceKeyspace
 
 import java.util.Collections;
 import java.util.List;
-
-import static org.springframework.data.cassandra.config.SchemaAction.CREATE_IF_NOT_EXISTS;
 
 @Configuration
 public class CassandraConfig extends AbstractCassandraConfiguration {
@@ -27,11 +24,6 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
     @Override
     protected String getKeyspaceName() {
         return cassandraProperties.getKeyspaceName();
-    }
-
-    @Override
-    public SchemaAction getSchemaAction() {
-        return CREATE_IF_NOT_EXISTS;
     }
 
     @Override
