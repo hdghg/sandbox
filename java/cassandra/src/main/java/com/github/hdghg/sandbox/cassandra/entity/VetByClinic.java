@@ -6,22 +6,19 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
-import java.util.Set;
 import java.util.UUID;
 
-@Table
+@Table("vet_by_clinic")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Vet {
+public class VetByClinic {
 
     @PrimaryKey
-    private UUID id;
+    private String clinicName;
 
-    private String firstName;
+    private UUID vetId;
 
-    private String lastName;
-
-    private Set<String> specialties;
+    private String fullName;
 
 }
