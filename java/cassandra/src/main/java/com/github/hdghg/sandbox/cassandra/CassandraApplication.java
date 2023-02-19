@@ -25,7 +25,7 @@ public class CassandraApplication {
     @Bean
     public CommandLineRunner runner(VetClinicService vetClinicService) {
         return args -> {
-            Instant end = Instant.now().plusSeconds(30);
+            Instant end = Instant.now().plusSeconds(3);
             while (Instant.now().isBefore(end)) {
                 List<Vet> toPersist = new ArrayList<>();
                 for (int i = 0; i < 100; i++) {

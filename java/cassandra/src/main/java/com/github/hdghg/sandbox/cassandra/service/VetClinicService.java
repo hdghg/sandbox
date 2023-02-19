@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.UUID;
 
+import static org.springframework.data.cassandra.core.mapping.BasicMapId.id;
+
 @Service
 public class VetClinicService {
 
@@ -24,7 +26,7 @@ public class VetClinicService {
     }
 
     public void assignVetToClinic(UUID vetId, String clinicName) {
-        vetRepository.findById(vetId).ifPresent(v -> vetByClinicRepository.save(
+        vetRepository.findById(id("id", vetId)).ifPresent(v -> vetByClinicRepository.save(
                 new VetByClinic(clinicName, v.getId(), v.getFirstName() + " " + v.getLastName())));
     }
 }

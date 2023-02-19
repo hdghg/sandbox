@@ -6,6 +6,8 @@ import com.github.hdghg.sandbox.cassandra.repository.VetByClinicRepository;
 import com.github.hdghg.sandbox.cassandra.repository.VetRepository;
 import com.github.hdghg.sandbox.cassandra.service.VetClinicService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.cassandra.core.mapping.BasicMapId;
+import org.springframework.data.cassandra.core.mapping.MapId;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,12 +36,14 @@ public class VetClinicController {
 
     @GetMapping("/vet/{id}")
     public Optional<Vet> vetById(@PathVariable("id") UUID id) {
-        return vetRepository.findById(id);
+        MapId mapId = BasicMapId.id("id", id);
+        return vetRepository.findById(mapId);
     }
 
     @GetMapping("/clinic/{name}")
     public Iterable<VetByClinic> vetsByClinic(@PathVariable("name") String name) {
-        return vetByClinicRepository.findAllById(Collections.singleton("name"));
+        MapId clinicName = BasicMapId.id("clinicName", name);
+        return vetByClinicRepository.findAllById(Collections.singleton(clinicName));
     }
 
     @GetMapping("/clinic")

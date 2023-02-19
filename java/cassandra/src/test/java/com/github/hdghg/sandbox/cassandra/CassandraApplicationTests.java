@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.cassandra.core.mapping.MapId;
 import org.springframework.test.context.ContextConfiguration;
 
 import java.util.ArrayList;
@@ -17,6 +18,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.UUID;
+
+import static org.springframework.data.cassandra.core.mapping.BasicMapId.id;
 
 @SpringBootTest
 @ContextConfiguration(initializers = CassandraInitializer.class)
@@ -44,7 +47,7 @@ class CassandraApplicationTests {
         Vet savedJane = vetRepository.save(jane);
 
         vetRepository.findAll().forEach(v -> log.info("Vet: {}", v));
-        vetRepository.findById(savedJohn.getId()).ifPresent(v -> log.info("Vet by id: {}", v));
+        vetRepository.findById(savedJohn.getMapId()).ifPresent(v -> log.info("Vet by id: {}", v));
 
         log.info("Count: " + vetRepository.count());
 
@@ -65,8 +68,9 @@ class CassandraApplicationTests {
         vetClinicService.assignVetToClinic(forCreation.get(2).getId(), "DrSlon");
         vetClinicService.assignVetToClinic(forCreation.get(3).getId(), "PawPaw");
 
-        vetByClinicRepository.findAllById(Arrays.asList("PawPaw", "DrSlon", "Aaaa")).forEach(c -> {
-            vetRepository.findById(c.getVetId()).ifPresent(v ->
+        List<MapId> mapIds = Arrays.asList(id("clinicName", "PawPaw"), id("clinicName", "DrSlon"), id("clinicName", "Aaaa"));
+        vetByClinicRepository.findAllById(mapIds).forEach(c -> {
+            vetRepository.findById(id("id", c.getVetId())).ifPresent(v ->
                     System.err.println("" + c.getClinicName() + " " + c.getFullName() + " " + v.getSpecialties()));
         });
         System.err.println(vetByClinicRepository.countByClinicName("DrSlon"));
