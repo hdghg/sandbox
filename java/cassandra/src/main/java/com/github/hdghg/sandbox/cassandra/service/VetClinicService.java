@@ -7,6 +7,7 @@ import com.github.hdghg.sandbox.cassandra.repository.VetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -18,8 +19,8 @@ public class VetClinicService {
     @Autowired
     private VetByClinicRepository vetByClinicRepository;
 
-    public Vet createVet(Vet vet) {
-        return vetRepository.save(vet);
+    public List<Vet> createVets(Iterable<Vet> vets) {
+        return vetRepository.insert(vets);
     }
 
     public void assignVetToClinic(UUID vetId, String clinicName) {

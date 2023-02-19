@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
@@ -49,8 +50,9 @@ public class VetClinicController {
     @PostMapping("/create")
     void addVet(@RequestParam String clinicName, @RequestParam String firstName, @RequestParam String lastName,
                 @RequestParam Set<String> specSet) {
-        Vet vet = vetClinicService.createVet(new Vet(UUID.randomUUID(), firstName, lastName, specSet));
-        vetClinicService.assignVetToClinic(vet.getId(), clinicName);
+        Vet theVet = new Vet(UUID.randomUUID(), firstName, lastName, specSet);
+        List<Vet> saved = vetClinicService.createVets(Collections.singleton(theVet));
+        saved.forEach(v -> vetClinicService.assignVetToClinic(v.getId(), clinicName));
     }
 
 }

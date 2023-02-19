@@ -11,9 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.UUID;
 
 @SpringBootTest
@@ -50,15 +52,18 @@ class CassandraApplicationTests {
 
     @Test
     void verifyVetByClinic() {
-        Vet vet1 = vetClinicService.createVet(new Vet(UUID.randomUUID(), "Bill", "Gates", Collections.singleton("it")));
-        Vet vet2 = vetClinicService.createVet(new Vet(UUID.randomUUID(), "Alice", "Cooper", new HashSet<>(Arrays.asList("lab", "sing"))));
-        Vet vet3 = vetClinicService.createVet(new Vet(UUID.randomUUID(), "Steve", "Jobs", Collections.singleton("entertainment")));
-        Vet vet4 = vetClinicService.createVet(new Vet(UUID.randomUUID(), "Mark", "Zuckerberg", Collections.singleton("security")));
+        List<Vet> forCreation = new ArrayList<>();
+        forCreation.add(new Vet(UUID.randomUUID(), "Bill", "Gates", Collections.singleton("it")));
+        forCreation.add(new Vet(UUID.randomUUID(), "Alice", "Cooper", new HashSet<>(Arrays.asList("lab", "sing"))));
+        forCreation.add(new Vet(UUID.randomUUID(), "Steve", "Jobs", Collections.singleton("entertainment")));
+        forCreation.add(new Vet(UUID.randomUUID(), "Mark", "Zuckerberg", Collections.singleton("security")));
 
-        vetClinicService.assignVetToClinic(vet1.getId(), "DrSlon");
-        vetClinicService.assignVetToClinic(vet2.getId(), "DrSlon");
-        vetClinicService.assignVetToClinic(vet3.getId(), "DrSlon");
-        vetClinicService.assignVetToClinic(vet4.getId(), "PawPaw");
+        vetClinicService.createVets(forCreation);
+
+        vetClinicService.assignVetToClinic(forCreation.get(0).getId(), "DrSlon");
+        vetClinicService.assignVetToClinic(forCreation.get(1).getId(), "DrSlon");
+        vetClinicService.assignVetToClinic(forCreation.get(2).getId(), "DrSlon");
+        vetClinicService.assignVetToClinic(forCreation.get(3).getId(), "PawPaw");
 
         vetByClinicRepository.findAllById(Arrays.asList("PawPaw", "DrSlon", "Aaaa")).forEach(c -> {
             vetRepository.findById(c.getVetId()).ifPresent(v ->
