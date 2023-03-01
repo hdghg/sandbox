@@ -9,6 +9,7 @@
     <modules>
         <module>standalone</module>
         <module>boot-based</module>
+        <module>cloud-based</module>
     </modules>
 
     <properties>
@@ -23,6 +24,13 @@
                 <groupId>org.testcontainers</groupId>
                 <artifactId>testcontainers-bom</artifactId>
                 <version>${testcontainers.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.7.9</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
