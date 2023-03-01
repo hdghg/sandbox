@@ -5,10 +5,10 @@
     <parent>
         <groupId>com.github.atokar</groupId>
         <artifactId>kafka-still-producer</artifactId>
-        <version>0.2</version>
+        <version>0.3</version>
     </parent>
     <artifactId>boot-based</artifactId>
-    <version>0.2</version>
+    <version>0.3</version>
     <description>still producer for spring boot</description>
     <dependencies>
         <dependency>
