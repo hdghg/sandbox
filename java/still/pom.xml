@@ -9,6 +9,7 @@
     <properties>
         <junit.version>4.12</junit.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <testcontainers.version>1.17.6</testcontainers.version>
     </properties>
 
     <dependencies>
@@ -34,12 +35,27 @@
         </dependency>
 
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>kafka</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers-bom</artifactId>
+                <version>${testcontainers.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
@@ -55,40 +71,24 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.2.0</version>
                 <configuration>
-                    <outputDirectory>
-                        lib
-                    </outputDirectory>
+                    <includeScope>compile</includeScope>
+                    <outputDirectory>lib</outputDirectory>
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>io.fabric8</groupId>
-                <artifactId>fabric8-maven-plugin</artifactId>
-                <version>4.4.1</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.0.0</version>
                 <configuration>
-                    <verbose>true</verbose>
-                    <images>
-                        <image>
-                            <name>hdghg/still:${project.version}</name>
-                            <build>
-                                <from>openjdk:8-jre</from>
-                                <entryPoint>
-                                    <exec>
-                                        <arg>java</arg>
-                                        <arg>-cp</arg>
-                                        <arg>/maven/${project.artifactId}.${project.packaging}</arg>
-                                        <arg>com.github.atokar.App</arg>
-                                    </exec>
-                                </entryPoint>
-
-                                <assembly>
-                                    <descriptorRef>artifact</descriptorRef>
-                                </assembly>
-                            </build>
-                        </image>
-                    </images>
+                    <filesets>
+                        <fileset>
+                            <directory>lib</directory>
+                        </fileset>
+                    </filesets>
                 </configuration>
             </plugin>
-       </plugins>
+        </plugins>
     </build>
 </project>

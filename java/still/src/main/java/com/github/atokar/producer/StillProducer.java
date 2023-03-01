@@ -13,10 +13,10 @@ public class StillProducer {
 
     private static final Logger log = LoggerFactory.getLogger(StillProducer.class);
 
-    public final String TOPIC = "still";
+    public static final String TOPIC = "still";
 
     public void runSequence() {
-        Producer<Long, Map<String, List<String>>> producer = createProducer();
+        Producer<Long, Map<String, List<String>>> producer = createProducer(System.getenv("BOOTSTRAP_SERVERS"));
         Map<String, List<String>> part1 = Collections.singletonMap("notes", Arrays.asList("C4", "E4", "A4"));
         Map<String, List<String>> part2 = Collections.singletonMap("notes", Arrays.asList("B3", "E4", "A4"));
         Map<String, List<String>> part3 = Collections.singletonMap("notes", Arrays.asList("B3", "E4", "G4"));
@@ -61,10 +61,9 @@ public class StillProducer {
         return result;
     }
 
-    public static Producer<Long, Map<String, List<String>>> createProducer() {
+    public static Producer<Long, Map<String, List<String>>> createProducer(String bootstrapServers) {
         Properties props = new Properties();
-        String bootstrapServers = System.getenv().getOrDefault("BOOTSTRAP_SERVERS", "localhost:9092");
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers == null ? "localhost:9092" : bootstrapServers);
         props.put(ProducerConfig.CLIENT_ID_CONFIG, "still-client");
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, LongSerializer.class.getName());
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class.getName());

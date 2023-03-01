@@ -14,7 +14,7 @@ public class AsyncStillProducer {
 
     private static final Logger log = LoggerFactory.getLogger(AsyncStillProducer.class);
     private final Iterator<Map<String, List<String>>> source;
-    private final Producer<Long, Map<String, List<String>>> producer = StillProducer.createProducer();
+    private final Producer<Long, Map<String, List<String>>> producer;
 
     {
         ArrayList<Map<String, List<String>>> list = new ArrayList<>();
@@ -27,6 +27,13 @@ public class AsyncStillProducer {
         source = new CircularIterator<>(list);
     }
 
+    public AsyncStillProducer(String bootstrapServers) {
+        this.producer = StillProducer.createProducer(bootstrapServers);
+    }
+
+    public AsyncStillProducer() {
+        this.producer = StillProducer.createProducer(System.getenv("BOOTSTRAP_SERVERS"));
+    }
 
     public CompletableFuture<Void> runSequenceAsync() {
         ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1, r -> {
