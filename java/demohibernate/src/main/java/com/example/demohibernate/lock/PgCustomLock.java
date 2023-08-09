@@ -14,31 +14,19 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.Duration;
 import java.time.Instant;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class PgCustomLock implements LockService {
 
     private static final Logger log = LoggerFactory.getLogger(PgCustomLock.class);
 
-    public static final String NAMESPACE_NAME = "NAMESPACE_NAME";
-    public static final String APP_USERNAME = "APP_USERNAME";
-    public static final String PG_ADVISORY_LOCK_ENABLED = "PG_ADVISORY_LOCK_ENABLED";
-
-    private MyPostgresDatabase database;
+    private ExtendedPostgresDatabase database;
     private Connection connection;
     private Long changeLogLockWaitTime;
     private Long changeLogLocRecheckTime;
 
-    private String getArgs() {
-        String namespace = System.getenv(NAMESPACE_NAME);
-        String username = System.getenv(APP_USERNAME);
-
-        return Math.abs(Objects.hashCode(namespace)) + ", " + Math.abs(Objects.hashCode(username));
-    }
-
     private boolean executeFunction(Connection con, String funcName) throws SQLException {
-        var sql = "select %s(%s)".formatted(funcName, getArgs());
+        var sql = "select %s(%s)".formatted(funcName, database.getLockFunctionArgs());
         log.info("trying '%s' ...".formatted(sql));
         try (
                 var stmt = con.createStatement();
@@ -101,17 +89,7 @@ public class PgCustomLock implements LockService {
 
     @Override
     public boolean supports(Database database) {
-//        if (!Boolean.parseBoolean(System.getenv(PG_ADVISORY_LOCK_ENABLED))) {
-//            log.info("%s is disabled because env variable '%s' is set to '%s'"
-//                    .formatted(getClass().getSimpleName(), PG_ADVISORY_LOCK_ENABLED, System.getenv(PG_ADVISORY_LOCK_ENABLED)));
-//            return false;
-//        }
-//        if (System.getenv(NAMESPACE_NAME) == null || System.getenv(APP_USERNAME) == null) {
-//            log.info("%s is disabled because it requires properties to be set: %s, %s"
-//                    .formatted(getClass().getSimpleName(), NAMESPACE_NAME, APP_USERNAME));
-//            return false;
-//        }
-        return database instanceof MyPostgresDatabase;
+        return database instanceof ExtendedPostgresDatabase;
     }
 
     // --------------- Config setters and getters ------------------------
@@ -122,7 +100,7 @@ public class PgCustomLock implements LockService {
 
     @Override
     public void setDatabase(Database database) {
-        this.database = ((MyPostgresDatabase) database);
+        this.database = ((ExtendedPostgresDatabase) database);
     }
 
     @Override
@@ -158,7 +136,7 @@ public class PgCustomLock implements LockService {
     public void init() {
     }
 
-    // ------------- not seem to be used ---------------------
+    // ------------- not used ---------------------
     @Override
     public boolean hasChangeLogLock() {
         throw new UnsupportedOperationException("Not used");

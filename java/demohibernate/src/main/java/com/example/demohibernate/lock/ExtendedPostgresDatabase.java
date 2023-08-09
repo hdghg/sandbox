@@ -4,17 +4,20 @@ import liquibase.database.core.PostgresDatabase;
 
 import javax.sql.DataSource;
 
-public class MyPostgresDatabase extends PostgresDatabase {
+public class ExtendedPostgresDatabase extends PostgresDatabase {
 
     private DataSource dataSource;
+
+    public String getLockFunctionArgs() {
+        return "0,0";
+    }
 
     public DataSource getDataSource() {
         return dataSource;
     }
 
-    public MyPostgresDatabase setDataSource(DataSource dataSource) {
+    public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
-        return this;
     }
 
     @Override

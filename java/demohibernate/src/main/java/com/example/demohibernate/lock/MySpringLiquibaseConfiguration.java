@@ -29,7 +29,7 @@ public class MySpringLiquibaseConfiguration {
             @Override
             protected Database createDatabase(Connection c, ResourceAccessor resourceAccessor) throws DatabaseException {
                 Database database = super.createDatabase(c, resourceAccessor);
-                if (database instanceof MyPostgresDatabase myPostgresDatabase) {
+                if (database instanceof ExtendedPostgresDatabase myPostgresDatabase) {
                     myPostgresDatabase.setDataSource(dataSource);
                 }
                 return database;
