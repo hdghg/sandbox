@@ -1,0 +1,399 @@
+#https://grafana.kube.stage.esn.one/d/E2NN4QKVz/http-requests-esn?orgId=1&var-namespace=video&var-service=inbound-gateway-backend&var-method=All&var-status=All&from=now-7d&to=now&var-uri=All
+
+inbound-gateway-backend - /inner/config/config/{id} - DELETE - [200]
+	0	0	0
+inbound-gateway-backend - /users/profile - DELETE - [200]
+	0	0.0167	0.0000252
+inbound-gateway-backend - /admin/admins/{id} - DELETE - [204]
+	0	0	0
+inbound-gateway-backend - /admin/ugc/{contentId}/promotion/{id} - DELETE - [204]
+	0	0	0
+inbound-gateway-backend - /admin/video/ugc/{id}/inside_tags/{tag_id} - DELETE - [204]
+	0	0.0500	0.0000588
+inbound-gateway-backend - /users/profile - DELETE - [403]
+	0	0	0
+inbound-gateway-backend - /admin/admins - GET - [200]
+	0	0.100	0.00250
+inbound-gateway-backend - /admin/audience/list - GET - [200]
+	0	0	0
+inbound-gateway-backend - /admin/badges - GET - [200]
+	0	0.100	0.000512
+inbound-gateway-backend - /admin/external_platform - GET - [200]
+	0	0.100	0.000830
+inbound-gateway-backend - /admin/inside_tags - GET - [200]
+	0	0.117	0.00304
+inbound-gateway-backend - /admin/interests - GET - [200]
+	0	0.0167	0.0000166
+inbound-gateway-backend - /admin/logs - GET - [200]
+	0	0.0167	0.0000168
+inbound-gateway-backend - /admin/message_rule/list - GET - [200]
+	0	0	0
+inbound-gateway-backend - /admin/message_template/list - GET - [200]
+	0	0	0
+inbound-gateway-backend - /admin/profile_badges - GET - [200]
+	0	0.0667	0.000463
+inbound-gateway-backend - /admin/themes - GET - [200]
+	0	0.0333	0.000252
+inbound-gateway-backend - /admin/ugc/promotion/{type} - GET - [200]
+	0	0.183	0.000887
+inbound-gateway-backend - /admin/users - GET - [200]
+	0	0.367	0.000768
+inbound-gateway-backend - /admin/users/{id} - GET - [200]
+	0	0.0500	0.000274
+inbound-gateway-backend - /admin/video/get-children-ids - GET - [200]
+	0	0	0
+inbound-gateway-backend - /admin/video/ugc - GET - [200]
+	0	0.300	0.00105
+inbound-gateway-backend - /cameo_stickers - GET - [200]
+	0	0.183	0.0136
+inbound-gateway-backend - /config/all - GET - [200]
+	0.133	0.467	0.0524
+inbound-gateway-backend - /config/list - GET - [200]
+	0	0.133	0.00132
+inbound-gateway-backend - /content/{id}/childs - GET - [200]
+	1.10	2.22	0.308
+inbound-gateway-backend - /crush-users - GET - [200]
+	0	0.0667	0.00341
+inbound-gateway-backend - /crush-users/count - GET - [200]
+	0.0667	0.200	0.0211
+inbound-gateway-backend - /feed/config-list/video - GET - [200]
+	0.0167	0.0500	0.000689
+inbound-gateway-backend - /feed/content/video - GET - [200]
+	0.117	0.200	0.0301
+inbound-gateway-backend - /inner/config/configs - GET - [200]
+	0	0.0333	0.0000745
+inbound-gateway-backend - /inner/config/exclusiongroups - GET - [200]
+	0	0	0
+inbound-gateway-backend - /inner/config/experiments - GET - [200]
+	0	0	0
+inbound-gateway-backend - /inner/config/servicenames - GET - [200]
+	0	0.0333	0.0000497
+inbound-gateway-backend - /inner/config/variations - GET - [200]
+	0	0	0
+inbound-gateway-backend - /interests - GET - [200]
+	0	0.0667	0.00347
+inbound-gateway-backend - /invites/leaderboard - GET - [200]
+	0.133	0.133	0.00100
+inbound-gateway-backend - /moderation-manager/settings - GET - [200]
+	0	0.0500	0.00174
+inbound-gateway-backend - /moderation-manager/tag-mapping/list - GET - [200]
+	0	0.0167	0.00000840
+inbound-gateway-backend - /moderation-manager/tag/list - GET - [200]
+	0	0.0667	0.00202
+inbound-gateway-backend - /notifications/havenew - GET - [200]
+	1.10	2.20	0.622
+inbound-gateway-backend - /notifications/v2 - GET - [200]
+	0.0167	0.133	0.00739
+inbound-gateway-backend - /profile_badges - GET - [200]
+	0.0167	0.0833	0.00752
+inbound-gateway-backend - /reaction/content/{id}/users/details - GET - [200]
+	0	0.167	0.00253
+inbound-gateway-backend - /reaction/list - GET - [200]
+	0	0.167	0.0135
+inbound-gateway-backend - /referral/activation - GET - [200]
+	0	0.0500	0.00184
+inbound-gateway-backend - /short-urls/resolve/{hash:[a-zA-Z\d]+} - GET - [200]
+	0	0.200	0.00229
+inbound-gateway-backend - /themes - GET - [200]
+	0.0333	0.133	0.00568
+inbound-gateway-backend - /ugc/{id}/download - GET - [200]
+	0	0.483	0.000756
+inbound-gateway-backend - /ugc_templates - GET - [200]
+	0	0.150	0.000471
+inbound-gateway-backend - /users - GET - [200]
+	0	0.150	0.000604
+inbound-gateway-backend - /users/filter - GET - [200]
+	0.0167	0.450	0.00715
+inbound-gateway-backend - /users/friends - GET - [200]
+	0	0.183	0.000612
+inbound-gateway-backend - /users/profile - GET - [200]
+	0.0833	0.533	0.0543
+inbound-gateway-backend - /users/search - GET - [200]
+	0	0.467	0.0131
+inbound-gateway-backend - /users/{id} - GET - [200]
+	0	0.267	0.0142
+inbound-gateway-backend - /users/{id}/favourites - GET - [200]
+	0	0.233	0.00762
+inbound-gateway-backend - /users/{id}/followers - GET - [200]
+	0	0.233	0.00578
+inbound-gateway-backend - /video/content/bookmarks - GET - [200]
+	0.0667	0.433	0.0365
+inbound-gateway-backend - /video/content/search - GET - [200]
+	0	0.350	0.00317
+inbound-gateway-backend - /video/ribbons/batch - GET - [200]
+	0	0	0
+inbound-gateway-backend - /video/ugc/{id} - GET - [200]
+	1.02	6.27	0.298
+inbound-gateway-backend - /video/ugc/{id}/permissions - GET - [200]
+	0	0	0
+inbound-gateway-backend - /video/ugc/{id}/replies - GET - [200]
+	1.02	1.72	0.270
+inbound-gateway-backend - /video/users/content - GET - [200]
+	0	1.15	0.0407
+inbound-gateway-backend - /video/users/v2/activities - GET - [200]
+	0	0.0167	0.000235
+inbound-gateway-backend - /video/users/{id}/content - GET - [200]
+	0.133	0.733	0.0577
+inbound-gateway-backend - /users/activities/view - GET - [204]
+	0	0.100	0.00805
+inbound-gateway-backend - /users/profile/validation - GET - [204]
+	0	7.70	0.0117
+inbound-gateway-backend - /users/{id}/subscribe - GET - [204]
+	0	0.500	0.00257
+inbound-gateway-backend - /users/{id}/unsubscribe - GET - [204]
+	0	0.617	0.000598
+inbound-gateway-backend - /admin/users/{id} - GET - [400]
+	0	0.0167	0.00000840
+inbound-gateway-backend - /content/{id}/childs - GET - [400]
+	0	0	0
+inbound-gateway-backend - /feed/content/video - GET - [400]
+	0	0	0
+inbound-gateway-backend - /short-urls/resolve/{hash:[a-zA-Z\d]+} - GET - [400]
+	0	0	0
+inbound-gateway-backend - /users - GET - [400]
+	0	0.583	0.00146
+inbound-gateway-backend - /users/profile/validation - GET - [400]
+	0.0833	4.20	0.0206
+inbound-gateway-backend - /users/search - GET - [400]
+	0	0.0167	0.0000333
+inbound-gateway-backend - /users/{id}/favourites - GET - [400]
+	0	0	0
+inbound-gateway-backend - /users/{id}/followers - GET - [400]
+	0	0	0
+inbound-gateway-backend - /users/{id}/subscribe - GET - [400]
+	0	0.0333	0.0000924
+inbound-gateway-backend - /users/{id}/unsubscribe - GET - [400]
+	0	0	0
+inbound-gateway-backend - /video/content/search - GET - [400]
+	0	0	0
+inbound-gateway-backend - /video/ugc/{id} - GET - [400]
+	0	0.150	0.000517
+inbound-gateway-backend - root - GET - [401]
+	0	0.333	0.000373
+inbound-gateway-backend - /admin/inside_tags - GET - [403]
+	0	0	0
+inbound-gateway-backend - /crush-users - GET - [403]
+	0	0.0167	0.0000336
+inbound-gateway-backend - root - GET - [403]
+	0	0.0167	0.0000588
+inbound-gateway-backend - /** - GET - [404]
+	0	0.0333	0.0000749
+inbound-gateway-backend - /content/{id}/childs - GET - [500]
+	0	0	0
+inbound-gateway-backend - /crush-users - GET - [500]
+	0	0	0
+inbound-gateway-backend - /crush-users/count - GET - [500]
+	0	0	0
+inbound-gateway-backend - /feed/content/video - GET - [500]
+	0	0	0
+inbound-gateway-backend - /notifications/havenew - GET - [500]
+	0	0	0
+inbound-gateway-backend - /notifications/v2 - GET - [500]
+	0	0	0
+inbound-gateway-backend - /users/profile - GET - [500]
+	0	0	0
+inbound-gateway-backend - /users/{id} - GET - [500]
+	0	0	0
+inbound-gateway-backend - /video/content/bookmarks - GET - [500]
+	0	0	0
+inbound-gateway-backend - /video/ugc/{id} - GET - [500]
+	0	0	0
+inbound-gateway-backend - /video/ugc/{id}/replies - GET - [500]
+	0	0.0167	0.00000826
+inbound-gateway-backend - /video/users/content - GET - [500]
+	0	0	0
+inbound-gateway-backend - /video/users/{id}/content - GET - [500]
+	0	0	0
+inbound-gateway-backend - root - GET - [500]
+	0	0	0
+inbound-gateway-backend - root - OPTIONS - [200]
+	0.0167	2.58	0.0203
+inbound-gateway-backend - /admin/users/{id} - PATCH - [200]
+	0	0.0333	0.000447
+inbound-gateway-backend - /content/{id} - PATCH - [200]
+	0	0.0167	0.000165
+inbound-gateway-backend - /users/profile - PATCH - [200]
+	0	0.0667	0.000985
+inbound-gateway-backend - /admin/admins/password - PATCH - [204]
+	0	0.0167	0.000521
+inbound-gateway-backend - /admin/admins/{id} - PATCH - [204]
+	0	0	0
+inbound-gateway-backend - /loader/assets - PATCH - [204]
+	0.0333	0.0833	0.00439
+inbound-gateway-backend - /notifications - PATCH - [204]
+	0	0.100	0.00248
+inbound-gateway-backend - /content/{id} - PATCH - [400]
+	0	0	0
+inbound-gateway-backend - /users/profile - PATCH - [400]
+	0	0.367	0.000695
+inbound-gateway-backend - root - PATCH - [401]
+	0	0	0
+inbound-gateway-backend - /loader/assets - PATCH - [500]
+	0	0	0
+inbound-gateway-backend - /users/profile - PATCH - [500]
+	0	0	0
+inbound-gateway-backend - /admin/admins - POST - [200]
+	0	0.0167	0.0000165
+inbound-gateway-backend - /admin/message_rule - POST - [200]
+	0	0	0
+inbound-gateway-backend - /admin/message_rule/execute - POST - [200]
+	0	0	0
+inbound-gateway-backend - /admin/message_template - POST - [200]
+	0	0	0
+inbound-gateway-backend - /admin/recommendation-worker/content-snapshot - POST - [200]
+	0	0	0
+inbound-gateway-backend - /admin/supervised_users/get-by-user-ids - POST - [200]
+	0	0.217	0.000322
+inbound-gateway-backend - /admin/ugc/promotion - POST - [200]
+	0	0	0
+inbound-gateway-backend - /admin/ugc/promotion/get-by-ids - POST - [200]
+	0.0167	0.117	0.00369
+inbound-gateway-backend - /admin/users/get-by-ids - POST - [200]
+	0	0.100	0.00261
+inbound-gateway-backend - /admin/video/ugc/get-by-ids - POST - [200]
+	0.0167	0.283	0.00598
+inbound-gateway-backend - /admin/video/ugc/inside_tags - POST - [200]
+	0	0	0
+inbound-gateway-backend - /auth/admin - POST - [200]
+	0	0.0167	0.0000248
+inbound-gateway-backend - /auth/anonymous - POST - [200]
+	0	0.0500	0.00249
+inbound-gateway-backend - /auth/login - POST - [200]
+	0.0167	0.0333	0.00124
+inbound-gateway-backend - /auth/login/anonymous - POST - [200]
+	0.0333	0.200	0.0191
+inbound-gateway-backend - /auth/login/phone/confirm-code - POST - [200]
+	0	0.0333	0.000200
+inbound-gateway-backend - /auth/refresh - POST - [200]
+	0	6.30	0.0104
+inbound-gateway-backend - /complaint_comment/list - POST - [200]
+	0	0.0167	0.0000168
+inbound-gateway-backend - /complaint_content/list - POST - [200]
+	2.53	9.52	1.58
+inbound-gateway-backend - /complaint_user/list - POST - [200]
+	0	0.0333	0.000151
+inbound-gateway-backend - /device - POST - [200]
+	0.0167	0.117	0.0106
+inbound-gateway-backend - /events/publish_event - POST - [200]
+	6.05	12.4	2.40
+inbound-gateway-backend - /events/publish_events - POST - [200]
+	0	5.97	0.0252
+inbound-gateway-backend - /events/register_app_context - POST - [200]
+	0.0500	6.47	0.0351
+inbound-gateway-backend - /inner/config/config - POST - [200]
+	0	0.0167	0.00000828
+inbound-gateway-backend - /loader/event - POST - [200]
+	0.100	0.350	0.0179
+inbound-gateway-backend - /moderation-manager/content-description/list - POST - [200]
+	0	0.0500	0.00228
+inbound-gateway-backend - /moderation-manager/content/description-violations - POST - [200]
+	0	0.0500	0.00235
+inbound-gateway-backend - /moderation-manager/content/get-auto-approve-times - POST - [200]
+	0	0.0333	0.00158
+inbound-gateway-backend - /moderation-manager/content/get-user-moderated-counters - POST - [200]
+	0	0.233	0.000431
+inbound-gateway-backend - /moderation-manager/content/list - POST - [200]
+	1.97	8.42	1.54
+inbound-gateway-backend - /moderation-manager/content/versioned-batch-set - POST - [200]
+	0.0167	0.300	0.00327
+inbound-gateway-backend - /moderation-manager/log/list - POST - [200]
+	0	0.0833	0.000118
+inbound-gateway-backend - /moderation-manager/user-info/list - POST - [200]
+	0.0167	0.0833	0.00308
+inbound-gateway-backend - /moderation-manager/user-info/status-batch-with-state - POST - [200]
+	0	0.133	0.000168
+inbound-gateway-backend - /referral/activation - POST - [200]
+	0	0.0500	0.00150
+inbound-gateway-backend - /referral/code - POST - [200]
+	0	0.0333	0.000231
+inbound-gateway-backend - /short-urls/shorten - POST - [200]
+	0	0.0667	0.000613
+inbound-gateway-backend - /users/profile/avatar - POST - [200]
+	0	0.0500	0.000463
+inbound-gateway-backend - /video/ugc - POST - [200]
+	0.0333	0.100	0.00450
+inbound-gateway-backend - /video/ugc/replies - POST - [200]
+	0.367	1.65	0.271
+inbound-gateway-backend - /admin/video/ugc/{id}/inside_tags/{tag_id} - POST - [204]
+	0	0.133	0.00114
+inbound-gateway-backend - /assets/{id}/screenshot - POST - [204]
+	0	0.117	0.00257
+inbound-gateway-backend - /auth/code - POST - [204]
+	0.0167	0.0833	0.00300
+inbound-gateway-backend - /auth/login/phone/request-code - POST - [204]
+	0	0.0500	0.000611
+inbound-gateway-backend - /content/{id}/view - POST - [204]
+	0.0167	0.367	0.0367
+inbound-gateway-backend - /crush-users/content/{id} - POST - [204]
+	0	0.0167	0.000331
+inbound-gateway-backend - /loader/event - POST - [204]
+	0.0500	7.93	0.188
+inbound-gateway-backend - /reaction/content/{id} - POST - [204]
+	0.0333	3.22	0.0405
+inbound-gateway-backend - /users/profile - POST - [204]
+	0	0.0333	0.00115
+inbound-gateway-backend - /auth/admin - POST - [400]
+	0	0.0167	0.0000168
+inbound-gateway-backend - /auth/code - POST - [400]
+	0	0.417	0.00102
+inbound-gateway-backend - /auth/login - POST - [400]
+	0	0.183	0.00236
+inbound-gateway-backend - /auth/login/phone/confirm-code - POST - [400]
+	0	0.133	0.000190
+inbound-gateway-backend - /auth/login/phone/request-code - POST - [400]
+	0	0.200	0.000251
+inbound-gateway-backend - /auth/refresh - POST - [400]
+	0	0.0167	0.0000420
+inbound-gateway-backend - /crush-users/content/{id} - POST - [400]
+	0	0.267	0.000580
+inbound-gateway-backend - /events/register_app_context - POST - [400]
+	0	0	0
+inbound-gateway-backend - /moderation-manager/content/versioned-batch-set - POST - [400]
+	0	0	0
+inbound-gateway-backend - /reaction/content/{id} - POST - [400]
+	0	0.0333	0.0000831
+inbound-gateway-backend - /users/profile - POST - [400]
+	0	0	0
+inbound-gateway-backend - /video/ugc - POST - [400]
+	0	0	0
+inbound-gateway-backend - /auth/refresh - POST - [401]
+	0	0.0167	0.0000252
+inbound-gateway-backend - root - POST - [401]
+	0	0.617	0.00485
+inbound-gateway-backend - /admin/ugc/promotion/get-by-ids - POST - [403]
+	0	0	0
+inbound-gateway-backend - /video/ugc - POST - [403]
+	0	0.100	0.000176
+inbound-gateway-backend - root - POST - [403]
+	0	0.200	0.000149
+inbound-gateway-backend - /content/{id}/view - POST - [404]
+	0	0	0
+inbound-gateway-backend - /admin/users/get-by-ids - POST - [500]
+	0	0	0
+inbound-gateway-backend - /admin/video/ugc/get-by-ids - POST - [500]
+	0	0	0
+inbound-gateway-backend - /auth/anonymous - POST - [500]
+	0	0	0
+inbound-gateway-backend - /auth/login - POST - [500]
+	0	0	0
+inbound-gateway-backend - /auth/login/anonymous - POST - [500]
+	0	0	0
+inbound-gateway-backend - /auth/refresh - POST - [500]
+	0	0	0
+inbound-gateway-backend - /complaint_content/list - POST - [500]
+	0	0	0
+inbound-gateway-backend - /content/{id}/view - POST - [500]
+	0	0	0
+inbound-gateway-backend - /moderation-manager/content/get-user-moderated-counters - POST - [500]
+	0	0	0
+inbound-gateway-backend - /moderation-manager/content/list - POST - [500]
+	0	0	0
+inbound-gateway-backend - /moderation-manager/content/versioned-batch-set - POST - [500]
+	0	0	0
+inbound-gateway-backend - /referral/code - POST - [500]
+	0	0	0
+inbound-gateway-backend - /video/ugc/replies - POST - [500]
+	0	0	0
+inbound-gateway-backend - root - POST - [500]
+	0	0	0
+inbound-gateway-backend - /users/profile/onboarding - PUT - [200]

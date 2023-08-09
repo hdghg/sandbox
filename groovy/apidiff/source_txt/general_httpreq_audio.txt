@@ -1,0 +1,548 @@
+# https://grafana.kube.stage.esn.one/d/E2NN4QKVz/http-requests-esn?orgId=1&var-namespace=audio&var-service=inbound-gateway-backend&var-method=All&var-status=All&from=now-7d&to=now&var-uri=All
+
+inbound-gateway-backend - /inner/config/config/{id} - DELETE - [200]
+	0	0	0
+inbound-gateway-backend - /users/profile - DELETE - [200]
+	0	0.0167	0.0000582
+inbound-gateway-backend - /admin/audio/ugc/{id}/inside_tags/{tag_id} - DELETE - [204]
+	0	0.0333	0.0000414
+inbound-gateway-backend - /comments/{id} - DELETE - [204]
+	0	0	0
+inbound-gateway-backend - /comments/{id}/like - DELETE - [204]
+	0	0.0167	0.0000910
+inbound-gateway-backend - /favorites - DELETE - [204]
+	0	0.100	0.000565
+inbound-gateway-backend - /lyrics/{id} - DELETE - [204]
+	0	0.0167	0.0000333
+inbound-gateway-backend - /reaction/content/{id} - DELETE - [204]
+	0	0.100	0.00187
+inbound-gateway-backend - /admin/admins - GET - [200]
+	0	0.283	0.00660
+inbound-gateway-backend - /admin/awards/images - GET - [200]
+	0	0.0167	0.000505
+inbound-gateway-backend - /admin/badges - GET - [200]
+	0	0.0167	0.00101
+inbound-gateway-backend - /admin/beat/compilations - GET - [200]
+	0	0	0
+inbound-gateway-backend - /admin/config/beat-section - GET - [200]
+	0	0	0
+inbound-gateway-backend - /admin/content - GET - [200]
+	0	0.133	0.00144
+inbound-gateway-backend - /admin/creator_categories - GET - [200]
+	0	0.0333	0.00101
+inbound-gateway-backend - /admin/inside_tags - GET - [200]
+	0	0.167	0.00517
+inbound-gateway-backend - /admin/profile_badges - GET - [200]
+	0	0.0167	0.00202
+inbound-gateway-backend - /admin/recommendation/config/feed - GET - [200]
+	0	0.0167	0.00101
+inbound-gateway-backend - /admin/tags - GET - [200]
+	0	0.0167	0.000505
+inbound-gateway-backend - /admin/themes - GET - [200]
+	0	0.0167	0.00152
+inbound-gateway-backend - /admin/users - GET - [200]
+	0	0.350	0.00295
+inbound-gateway-backend - /admin/votes/configurations - GET - [200]
+	0	0.0167	0.000505
+inbound-gateway-backend - /audio/tags/{id}/content - GET - [200]
+	0.0167	0.583	0.0320
+inbound-gateway-backend - /audio/ugc/{id} - GET - [200]
+	0.0667	0.400	0.0477
+inbound-gateway-backend - /audio/users/content - GET - [200]
+	0.167	5.18	0.242
+inbound-gateway-backend - /audio/users/likes/content - GET - [200]
+	0.0667	0.300	0.0218
+inbound-gateway-backend - /audio/users/{id}/content - GET - [200]
+	0.0167	0.517	0.0685
+inbound-gateway-backend - /audio_track/{id}/content - GET - [200]
+	0	0.367	0.0225
+inbound-gateway-backend - /audio_tracks/filter - GET - [200]
+	0	0.0667	0.00392
+inbound-gateway-backend - /audio_tracks/{id} - GET - [200]
+	0.0167	0.333	0.0418
+inbound-gateway-backend - /banners - GET - [200]
+	0	0.217	0.0184
+inbound-gateway-backend - /beat/config - GET - [200]
+	0	0.250	0.0240
+inbound-gateway-backend - /beats-screen - GET - [200]
+	0	0	0
+inbound-gateway-backend - /collections - GET - [200]
+	0	0.100	0.00735
+inbound-gateway-backend - /collections/audio/{id} - GET - [200]
+	0	0.433	0.0296
+inbound-gateway-backend - /collections/audio_track/{id} - GET - [200]
+	0	0.217	0.0143
+inbound-gateway-backend - /collections/banner/{id} - GET - [200]
+	0	0.217	0.0147
+inbound-gateway-backend - /comments/{id} - GET - [200]
+	0	0.0167	0.00167
+inbound-gateway-backend - /comments/{id}/replies - GET - [200]
+	0	0.200	0.0212
+inbound-gateway-backend - /config/all - GET - [200]
+	0.183	0.550	0.0789
+inbound-gateway-backend - /config/list - GET - [200]
+	0	0	0
+inbound-gateway-backend - /contents/{id}/comments - GET - [200]
+	0.0167	1.08	0.0928
+inbound-gateway-backend - /cover-generator/tasks/{task_id} - GET - [200]
+	0.317	2.83	0.516
+inbound-gateway-backend - /external_platform - GET - [200]
+	0	0.0333	0.000959
+inbound-gateway-backend - /feed/config-list/audio - GET - [200]
+	0.133	0.483	0.0726
+inbound-gateway-backend - /feed/content/audio - GET - [200]
+	0.217	0.817	0.193
+inbound-gateway-backend - /inner/config/configs - GET - [200]
+	0	0.0833	0.000190
+inbound-gateway-backend - /inner/config/exclusiongroups - GET - [200]
+	0	0.0500	0.0000420
+inbound-gateway-backend - /inner/config/experiments - GET - [200]
+	0	0.0333	0.0000252
+inbound-gateway-backend - /inner/config/servicenames - GET - [200]
+	0	0.0167	0.0000168
+inbound-gateway-backend - /inner/config/variations - GET - [200]
+	0	0.0500	0.0000504
+inbound-gateway-backend - /lyrics - GET - [200]
+	0	0.183	0.00511
+inbound-gateway-backend - /moderation-manager/settings - GET - [200]
+	0	0.0833	0.00125
+inbound-gateway-backend - /moderation-manager/tag/list - GET - [200]
+	0	0.117	0.00324
+inbound-gateway-backend - /notifications - GET - [200]
+	0	0	0
+inbound-gateway-backend - /notifications/havenew - GET - [200]
+	5.08	20.0	4.49
+inbound-gateway-backend - /notifications/v2 - GET - [200]
+	0.233	0.817	0.103
+inbound-gateway-backend - /principal - GET - [200]
+	0.233	1.20	0.217
+inbound-gateway-backend - /profile_badges - GET - [200]
+	0.183	0.817	0.149
+inbound-gateway-backend - /reaction/content/{id}/users - GET - [200]
+	0	0.300	0.00689
+inbound-gateway-backend - /referral/activation - GET - [200]
+	0	0.0167	0.000487
+inbound-gateway-backend - /short-urls/resolve/{hash:[a-zA-Z\d]+} - GET - [200]
+	0	0.267	0.00834
+inbound-gateway-backend - /tags - GET - [200]
+	0.167	0.733	0.0654
+inbound-gateway-backend - /tags/{id} - GET - [200]
+	0.0167	0.483	0.0203
+inbound-gateway-backend - /themes - GET - [200]
+	0.0167	0.600	0.0475
+inbound-gateway-backend - /ugc/{id}/download - GET - [200]
+	0	0.800	0.0133
+inbound-gateway-backend - /users - GET - [200]
+	0	0.0500	0.000587
+inbound-gateway-backend - /users/filter - GET - [200]
+	0	0.650	0.0408
+inbound-gateway-backend - /users/followers - GET - [200]
+	0	0.0667	0.0121
+inbound-gateway-backend - /users/profile - GET - [200]
+	0.333	1.22	0.293
+inbound-gateway-backend - /users/{id} - GET - [200]
+	0.0167	0.633	0.0690
+inbound-gateway-backend - /users/{id}/favourites - GET - [200]
+	0	0.0500	0.000744
+inbound-gateway-backend - /users/{id}/followers - GET - [200]
+	0	0.233	0.00200
+inbound-gateway-backend - /users/activities/view - GET - [204]
+	0.100	0.283	0.0537
+inbound-gateway-backend - /users/profile/validation - GET - [204]
+	0	0.317	0.0104
+inbound-gateway-backend - /users/{id}/subscribe - GET - [204]
+	0	1.73	0.0243
+inbound-gateway-backend - /admin/content - GET - [400]
+	0	0.0167	0.00000840
+inbound-gateway-backend - /audio/ugc/{id} - GET - [400]
+	0	0.0333	0.000241
+inbound-gateway-backend - /audio_track/{id}/content - GET - [400]
+	0	0.0333	0.000101
+inbound-gateway-backend - /audio_tracks/{id} - GET - [400]
+	0	0.0667	0.000227
+inbound-gateway-backend - /contents/{id}/comments - GET - [400]
+	0	0.0167	0.0000168
+inbound-gateway-backend - /feed/content/audio - GET - [400]
+	0	0.0333	0.0000167
+inbound-gateway-backend - /short-urls/resolve/{hash:[a-zA-Z\d]+} - GET - [400]
+	0	0	0
+inbound-gateway-backend - /tags/{id} - GET - [400]
+	0	0	0
+inbound-gateway-backend - /ugc/{id}/download - GET - [400]
+	0	0	0
+inbound-gateway-backend - /users - GET - [400]
+	0	0	0
+inbound-gateway-backend - /users/profile/validation - GET - [400]
+	0	0.333	0.0128
+inbound-gateway-backend - /users/{id} - GET - [400]
+	0	0	0
+inbound-gateway-backend - /users/{id}/subscribe - GET - [400]
+	0	0.150	0.000365
+inbound-gateway-backend - root - GET - [401]
+	0.300	2.10	0.0376
+inbound-gateway-backend - /admin/inside_tags - GET - [403]
+	0	0	0
+inbound-gateway-backend - /short-urls/resolve/{hash:[a-zA-Z\d]+} - GET - [403]
+	0	0	0
+inbound-gateway-backend - /users/profile/validation - GET - [403]
+	0	0	0
+inbound-gateway-backend - root - GET - [403]
+	0	0.133	0.000530
+inbound-gateway-backend - /admin/admins - GET - [500]
+	0	0	0
+inbound-gateway-backend - /admin/content - GET - [500]
+	0	0	0
+inbound-gateway-backend - /admin/inside_tags - GET - [500]
+	0	0	0
+inbound-gateway-backend - /admin/users - GET - [500]
+	0	0	0
+inbound-gateway-backend - /audio/tags/{id}/content - GET - [500]
+	0	0.0167	0.00000840
+inbound-gateway-backend - /audio/ugc/{id} - GET - [500]
+	0	0	0
+inbound-gateway-backend - /audio/users/content - GET - [500]
+	0	0.0167	0.0000167
+inbound-gateway-backend - /audio/users/likes/content - GET - [500]
+	0	0	0
+inbound-gateway-backend - /audio/users/{id}/content - GET - [500]
+	0	0	0
+inbound-gateway-backend - /audio_track/{id}/content - GET - [500]
+	0	0	0
+inbound-gateway-backend - /audio_tracks/filter - GET - [500]
+	0	0	0
+inbound-gateway-backend - /audio_tracks/{id} - GET - [500]
+	0	0	0
+inbound-gateway-backend - /banners - GET - [500]
+	0	0	0
+inbound-gateway-backend - /beat/config - GET - [500]
+	0	0	0
+inbound-gateway-backend - /collections - GET - [500]
+	0	0	0
+inbound-gateway-backend - /collections/audio/{id} - GET - [500]
+	0	0	0
+inbound-gateway-backend - /collections/audio_track/{id} - GET - [500]
+	0	0	0
+inbound-gateway-backend - /comments/{id}/replies - GET - [500]
+	0	0	0
+inbound-gateway-backend - /contents/{id}/comments - GET - [500]
+	0	0	0
+inbound-gateway-backend - /feed/config-list/audio - GET - [500]
+	0.0167	0.0167	0.00000827
+inbound-gateway-backend - /feed/content/audio - GET - [500]
+	0.0333	0.0333	0.0000331
+inbound-gateway-backend - /lyrics - GET - [500]
+	0	0	0
+inbound-gateway-backend - /moderation-manager/settings - GET - [500]
+	0	0	0
+inbound-gateway-backend - /moderation-manager/tag/list - GET - [500]
+	0	0	0
+inbound-gateway-backend - /notifications/havenew - GET - [500]
+	0	0.133	0.0000826
+inbound-gateway-backend - /notifications/v2 - GET - [500]
+	0.0333	0.0333	0.0000168
+inbound-gateway-backend - /principal - GET - [500]
+	0.0167	0.0167	0.00000837
+inbound-gateway-backend - /profile_badges - GET - [500]
+	0.0833	0.0833	0.0000672
+inbound-gateway-backend - /tags - GET - [500]
+	0	0	0
+inbound-gateway-backend - /tags/{id} - GET - [500]
+	0	0	0
+inbound-gateway-backend - /themes - GET - [500]
+	0	0	0
+inbound-gateway-backend - /ugc/{id}/download - GET - [500]
+	0	0	0
+inbound-gateway-backend - /users - GET - [500]
+	0	0	0
+inbound-gateway-backend - /users/activities/view - GET - [500]
+	0.0167	0.0167	0.00000840
+inbound-gateway-backend - /users/filter - GET - [500]
+	0	0.0167	0.00000827
+inbound-gateway-backend - /users/profile - GET - [500]
+	0.0500	0.0500	0.0000252
+inbound-gateway-backend - /users/profile/validation - GET - [500]
+	0	0	0
+inbound-gateway-backend - /users/{id} - GET - [500]
+	0	0	0
+inbound-gateway-backend - /users/{id}/subscribe - GET - [500]
+	0	0.0500	0.0000252
+inbound-gateway-backend - root - GET - [500]
+	0	0	0
+inbound-gateway-backend - root - OPTIONS - [200]
+	0.150	6.20	0.255
+inbound-gateway-backend - /content/{id} - PATCH - [200]
+	0	0.1000	0.00151
+inbound-gateway-backend - /users/profile - PATCH - [200]
+	0	0.250	0.00648
+inbound-gateway-backend - /admin/admins/password - PATCH - [204]
+	0	0	0
+inbound-gateway-backend - /loader/assets - PATCH - [204]
+	0	0.0500	0.00352
+inbound-gateway-backend - /notifications - PATCH - [204]
+	0.100	0.283	0.0331
+inbound-gateway-backend - /content/{id} - PATCH - [400]
+	0	0.0667	0.000277
+inbound-gateway-backend - /users/profile - PATCH - [400]
+	0	0.0333	0.0000995
+inbound-gateway-backend - root - PATCH - [401]
+	0	0.0167	0.00000840
+inbound-gateway-backend - /content/{id} - PATCH - [500]
+	0	0	0
+inbound-gateway-backend - /loader/assets - PATCH - [500]
+	0	0	0
+inbound-gateway-backend - /notifications - PATCH - [500]
+	0	0	0
+inbound-gateway-backend - /users/profile - PATCH - [500]
+	0	0.0667	0.0000472
+inbound-gateway-backend - /admin/admins - POST - [200]
+	0	0	0
+inbound-gateway-backend - /admin/audio/ugc/get-by-ids - POST - [200]
+	0	0.467	0.0126
+inbound-gateway-backend - /admin/comments/get-by-ids - POST - [200]
+	0	0.0333	0.000728
+inbound-gateway-backend - /admin/ugc/promotion/get-by-ids - POST - [200]
+	0	0.333	0.00824
+inbound-gateway-backend - /admin/users/get-by-ids - POST - [200]
+	0	0.183	0.00787
+inbound-gateway-backend - /audio/pgc - POST - [200]
+	0	0.0667	0.00369
+inbound-gateway-backend - /audio/ugc - POST - [200]
+	0	0.0500	0.00200
+inbound-gateway-backend - /audio/ugc/freestyle - POST - [200]
+	0	0	0
+inbound-gateway-backend - /audio_tracks/filter - POST - [200]
+	0	0.0333	0.0000420
+inbound-gateway-backend - /audio_tracks/filter/count - POST - [200]
+	0	0.267	0.00943
+inbound-gateway-backend - /auth/admin - POST - [200]
+	0	0.0167	0.0000331
+inbound-gateway-backend - /auth/anonymous - POST - [200]
+	0.0167	0.0833	0.00841
+inbound-gateway-backend - /auth/login - POST - [200]
+	0	0.0500	0.00144
+inbound-gateway-backend - /auth/login/anonymous - POST - [200]
+	0.167	0.917	0.132
+inbound-gateway-backend - /auth/login/phone/confirm-code - POST - [200]
+	0	0.0333	0.00190
+inbound-gateway-backend - /auth/refresh - POST - [200]
+	0.100	0.517	0.0760
+inbound-gateway-backend - /beat/audio_tracks - POST - [200]
+	0	0.583	0.0654
+inbound-gateway-backend - /comments - POST - [200]
+	0	0.167	0.0103
+inbound-gateway-backend - /comments/reply - POST - [200]
+	0	0.167	0.00654
+inbound-gateway-backend - /complaint_comment/list - POST - [200]
+	3.62	7.13	1.58
+inbound-gateway-backend - /complaint_content/list - POST - [200]
+	3.58	5.35	1.58
+inbound-gateway-backend - /content/{id}/cover - POST - [200]
+	0	0.0667	0.00418
+inbound-gateway-backend - /cover-generator/tasks - POST - [200]
+	0.117	1.10	0.174
+inbound-gateway-backend - /device - POST - [200]
+	0.233	0.633	0.0734
+inbound-gateway-backend - /events/publish_event - POST - [200]
+	2.97	18.1	5.53
+inbound-gateway-backend - /events/publish_events - POST - [200]
+	0.100	1.85	0.554
+inbound-gateway-backend - /events/register_app_context - POST - [200]
+	0.367	2.25	0.0990
+inbound-gateway-backend - /loader/event - POST - [200]
+	0	11	0.0803
+inbound-gateway-backend - /lyrics - POST - [200]
+	0.0500	0.0667	0.00421
+inbound-gateway-backend - /moderation-manager/comments/blacklist/log - POST - [200]
+	0	0.0333	0.000736
+inbound-gateway-backend - /moderation-manager/comments/list - POST - [200]
+	3.57	4.97	1.56
+inbound-gateway-backend - /moderation-manager/comments/status-batch - POST - [200]
+	0	0.0333	0.000712
+inbound-gateway-backend - /moderation-manager/content-cover/list - POST - [200]
+	0	0.100	0.00416
+inbound-gateway-backend - /moderation-manager/content-description/list - POST - [200]
+	0	0.133	0.00411
+inbound-gateway-backend - /moderation-manager/content/description-violations - POST - [200]
+	0	0.100	0.00396
+inbound-gateway-backend - /moderation-manager/content/get-auto-approve-times - POST - [200]
+	0	0.117	0.00333
+inbound-gateway-backend - /moderation-manager/content/list - POST - [200]
+	3.57	4.88	1.55
+inbound-gateway-backend - /moderation-manager/content/versioned-batch-set - POST - [200]
+	0	0.267	0.00595
+inbound-gateway-backend - /moderation-manager/user-info/list - POST - [200]
+	0	0.100	0.00595
+inbound-gateway-backend - /referral/activation - POST - [200]
+	0	0.0167	0.00000840
+inbound-gateway-backend - /short-urls/shorten - POST - [200]
+	0	0.0500	0.00162
+inbound-gateway-backend - /upscaler/to_stories - POST - [200]
+	0	0.0333	0.00104
+inbound-gateway-backend - /upscaler/upscale - POST - [200]
+	0	0.133	0.0125
+inbound-gateway-backend - /users/profile/avatar - POST - [200]
+	0	0.167	0.00184
+inbound-gateway-backend - /admin/audio/ugc/{id}/inside_tags/{tag_id} - POST - [204]
+	0	0.383	0.00438
+inbound-gateway-backend - /assets/{id}/screenshot - POST - [204]
+	0	0.0500	0.00352
+inbound-gateway-backend - /auth/code - POST - [204]
+	0	0.0667	0.00172
+inbound-gateway-backend - /auth/login/phone/request-code - POST - [204]
+	0	0.0500	0.00213
+inbound-gateway-backend - /comments/{id}/like - POST - [204]
+	0	1.02	0.0142
+inbound-gateway-backend - /complaint_comment - POST - [204]
+	0	0	0
+inbound-gateway-backend - /complaint_comment/resolve - POST - [204]
+	0	0	0
+inbound-gateway-backend - /content/{id}/mark - POST - [204]
+	0	0.0500	0.000182
+inbound-gateway-backend - /content/{id}/upload-finished - POST - [204]
+	0	0.0500	0.00342
+inbound-gateway-backend - /content/{id}/view - POST - [204]
+	0.400	3.07	0.652
+inbound-gateway-backend - /favorites - POST - [204]
+	0	0.117	0.00456
+inbound-gateway-backend - /loader/event - POST - [204]
+	0.100	13.4	0.332
+inbound-gateway-backend - /reaction/content/{id} - POST - [204]
+	0	0.833	0.0637
+inbound-gateway-backend - /vote/{id}/content/{contentId} - POST - [204]
+	0	0	0
+inbound-gateway-backend - /audio/pgc - POST - [400]
+	0	0.0667	0.000126
+inbound-gateway-backend - /audio/ugc - POST - [400]
+	0	0.0667	0.000109
+inbound-gateway-backend - /auth/admin - POST - [400]
+	0	0	0
+inbound-gateway-backend - /auth/code - POST - [400]
+	0	0	0
+inbound-gateway-backend - /auth/login - POST - [400]
+	0	0.0333	0.0000420
+inbound-gateway-backend - /auth/login/phone/confirm-code - POST - [400]
+	0	0.100	0.000176
+inbound-gateway-backend - /auth/login/phone/request-code - POST - [400]
+	0	0.0333	0.0000472
+inbound-gateway-backend - /auth/refresh - POST - [400]
+	0	0.0333	0.0000336
+inbound-gateway-backend - /comments - POST - [400]
+	0	0.0500	0.0000413
+inbound-gateway-backend - /comments/reply - POST - [400]
+	0	0	0
+inbound-gateway-backend - /content/{id}/upload-finished - POST - [400]
+	0	0	0
+inbound-gateway-backend - /events/register_app_context - POST - [400]
+	0	0.150	0.00115
+inbound-gateway-backend - /lyrics - POST - [400]
+	0	0.0500	0.0000504
+inbound-gateway-backend - /reaction/content/{id} - POST - [400]
+	0	0.183	0.00112
+inbound-gateway-backend - /auth/refresh - POST - [401]
+	0.0167	0.0667	0.000580
+inbound-gateway-backend - root - POST - [401]
+	1.32	1.32	0.0197
+inbound-gateway-backend - /admin/ugc/promotion/get-by-ids - POST - [403]
+	0	0	0
+inbound-gateway-backend - /assets/{id}/screenshot - POST - [403]
+	0	0	0
+inbound-gateway-backend - /audio/ugc - POST - [403]
+	0	0	0
+inbound-gateway-backend - /auth/login - POST - [403]
+	0	0	0
+inbound-gateway-backend - /auth/login/phone/confirm-code - POST - [403]
+	0	0	0
+inbound-gateway-backend - /content/{id}/cover - POST - [403]
+	0	0	0
+inbound-gateway-backend - /lyrics - POST - [403]
+	0	0.500	0.00538
+inbound-gateway-backend - /moderation-manager/comments/blacklist/log - POST - [403]
+	0	0	0
+inbound-gateway-backend - /vote/{id}/content/{contentId} - POST - [403]
+	0	0	0
+inbound-gateway-backend - root - POST - [403]
+	0	0.150	0.000488
+inbound-gateway-backend - /audio/pgc - POST - [404]
+	0	0	0
+inbound-gateway-backend - /content/{id}/view - POST - [404]
+	0.183	0.183	0.183
+inbound-gateway-backend - /admin/audio/ugc/get-by-ids - POST - [500]
+	0	0	0
+inbound-gateway-backend - /admin/audio/ugc/{id}/inside_tags/{tag_id} - POST - [500]
+	0	0	0
+inbound-gateway-backend - /admin/users/get-by-ids - POST - [500]
+	0	0	0
+inbound-gateway-backend - /assets/{id}/screenshot - POST - [500]
+	0	0	0
+inbound-gateway-backend - /audio/pgc - POST - [500]
+	0	0	0
+inbound-gateway-backend - /audio/ugc - POST - [500]
+	0	0	0
+inbound-gateway-backend - /auth/admin - POST - [500]
+	0	0	0
+inbound-gateway-backend - /auth/anonymous - POST - [500]
+	0	0	0
+inbound-gateway-backend - /auth/login/anonymous - POST - [500]
+	0.0333	0.0333	0.0000336
+inbound-gateway-backend - /auth/login/phone/confirm-code - POST - [500]
+	0	0	0
+inbound-gateway-backend - /auth/login/phone/request-code - POST - [500]
+	0	0	0
+inbound-gateway-backend - /auth/refresh - POST - [500]
+	0.133	0.133	0.0000909
+inbound-gateway-backend - /beat/audio_tracks - POST - [500]
+	0	0	0
+inbound-gateway-backend - /comments - POST - [500]
+	0	0	0
+inbound-gateway-backend - /comments/reply - POST - [500]
+	0	0	0
+inbound-gateway-backend - /comments/{id}/like - POST - [500]
+	0	0	0
+inbound-gateway-backend - /content/{id}/view - POST - [500]
+	0	0	0
+inbound-gateway-backend - /cover-generator/tasks - POST - [500]
+	0	0.0167	0.0000252
+inbound-gateway-backend - /device - POST - [500]
+	0	0.0333	0.000160
+inbound-gateway-backend - /events/publish_event - POST - [500]
+	0.500	0.500	0.000252
+inbound-gateway-backend - /events/publish_events - POST - [500]
+	0	0	0
+inbound-gateway-backend - /events/register_app_context - POST - [500]
+	0	0	0
+inbound-gateway-backend - /favorites - POST - [500]
+	0	0	0
+inbound-gateway-backend - /loader/event - POST - [500]
+	0	0	0
+inbound-gateway-backend - /lyrics - POST - [500]
+	0	0	0
+inbound-gateway-backend - /moderation-manager/comments/list - POST - [500]
+	0	0.0167	0.00000840
+inbound-gateway-backend - /moderation-manager/content-cover/list - POST - [500]
+	0	0	0
+inbound-gateway-backend - /moderation-manager/content-description/list - POST - [500]
+	0	0	0
+inbound-gateway-backend - /moderation-manager/content/description-violations - POST - [500]
+	0	0	0
+inbound-gateway-backend - /moderation-manager/content/get-auto-approve-times - POST - [500]
+	0	0	0
+inbound-gateway-backend - /moderation-manager/content/list - POST - [500]
+	0	0.0500	0.0000336
+inbound-gateway-backend - /moderation-manager/content/versioned-batch-set - POST - [500]
+	0	0	0
+inbound-gateway-backend - /moderation-manager/user-info/list - POST - [500]
+	0	0	0
+inbound-gateway-backend - /reaction/content/{id} - POST - [500]
+	0	0	0
+inbound-gateway-backend - /short-urls/shorten - POST - [500]
+	0	0	0
+inbound-gateway-backend - /upscaler/upscale - POST - [500]
+	0	0	0
+inbound-gateway-backend - /users/profile/avatar - POST - [500]
+	0	0	0
+inbound-gateway-backend - root - POST - [500]
+	0	0	0
+inbound-gateway-backend - /lyrics/{id} - PUT - [200]
+	0.333	0.900	0.0723
+inbound-gateway-backend - /lyrics/{id} - PUT - [500]
+	0	0.0333	0.0000168
