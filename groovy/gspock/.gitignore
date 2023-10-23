@@ -1,0 +1,6 @@
+.idea/
+target/
+*.json
+local.sh
+.mvn/wrapper/maven-wrapper.jar
+
