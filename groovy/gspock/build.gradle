@@ -1,0 +1,35 @@
+plugins {
+    id 'groovy'
+    id 'application'
+}
+
+ext {
+    set('junitVersion', '5.10.0')
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation localGroovy()
+    testImplementation 'org.spockframework:spock-core:2.2-groovy-3.0'
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${project.junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${project.junitVersion}"
+}
+
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+application {
+    mainClass = 'app.App'
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+}
