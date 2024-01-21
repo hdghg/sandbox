@@ -1,0 +1,4 @@
+spring.redis.database: 0
+spring.redis.host: redis
+spring.redis.password: mypass
+spring.redis.timeout: 60000
